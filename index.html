@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,115 +17,216 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="background-globes">
-        <div class="globe globe-1"></div>
-        <div class="globe globe-2"></div>
-    </div>
-    
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Najmul Hak Ansari</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-circle">NA</div>
         </div>
+        <ul class="sidebar-nav">
+            <li><a href="#home" class="nav-item active" data-tooltip="Home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </a></li>
+            <li><a href="#about" class="nav-item" data-tooltip="About">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </a></li>
+            <li><a href="#projects" class="nav-item" data-tooltip="Projects">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+            </a></li>
+            <li><a href="#contact" class="nav-item" data-tooltip="Contact">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="https://www.linkedin.com/in/najmul12/" target="_blank" class="social-link" data-tooltip="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-progress"></div>
     </nav>
 
-    <main>
+    <!-- Main Content -->
+    <main class="main-content">
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="container hero-container">
+        <section id="home" class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-image-container">
+                    <div class="decorative-circle circle-1"></div>
+                    <div class="decorative-circle circle-2"></div>
+                    <img src="images/profile.jpg" alt="Najmul Hak Ansari" class="hero-profile-img">
+                    <div class="floating-badge badge-1">
+                        <span class="badge-icon">💻</span>
+                        <span class="badge-text">Flutter Dev</span>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <span class="badge-icon">🐍</span>
+                        <span class="badge-text">Django Expert</span>
+                    </div>
+                </div>
                 <div class="hero-content">
-                    <span class="greeting">Hello, I'm</span>
-                    <h1 class="name">Najmul Hak Ansari</h1>
-                    <h2 class="role">Flutter & Python Django Developer</h2>
-                    <p class="location"><span class="icon">📍</span> Kathmandu, Nepal</p>
+                    <div class="hero-text">
+                        <span class="greeting-badge">👋 Hello, I'm</span>
+                        <h1 class="hero-name">Najmul Hak<br>Ansari</h1>
+                        <p class="hero-title">Full-Stack Developer</p>
+                        <p class="hero-subtitle">Building beautiful mobile apps with <span class="highlight">Flutter</span> and powerful backends with <span class="highlight">Django</span></p>
+                        <div class="hero-location">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Kathmandu, Nepal</span>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Years Exp</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Dedication</div>
+                        </div>
+                    </div>
                     <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/najmul12/" target="_blank" class="social-icon">LinkedIn</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="images/profile.jpg" alt="Najmul Hak Ansari" class="profile-pic">
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section about-section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <p class="bio">
-                        I am a passionate developer with expertise in building cross-platform mobile applications using Flutter and robust backend systems using Python and Django. I love turning ideas into functional, beautiful software.
-                    </p>
+        <!-- About/Skills Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+            </div>
+            <div class="about-content">
+                <p class="about-text">
+                    I am a passionate full-stack developer with expertise in building cross-platform mobile applications using Flutter and robust backend systems using Python and Django. I love turning ideas into functional, beautiful software that makes a difference.
+                </p>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">📱</div>
+                        <h3 class="skill-name">Flutter</h3>
+                        <p class="skill-desc">Cross-platform mobile development</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🐍</div>
+                        <h3 class="skill-name">Python</h3>
+                        <p class="skill-desc">Backend development & APIs</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚡</div>
+                        <h3 class="skill-name">Django</h3>
+                        <p class="skill-desc">Scalable web applications</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3 class="skill-name">UI/UX</h3>
+                        <p class="skill-desc">Beautiful user experiences</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section projects-section">
-            <div class="container">
+        <!-- Projects Section - Bento Grid -->
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="card-content">
-                            <div class="card-header">
-                                <span class="platform-tag">Android</span>
-                                <h3 class="project-title">Laganisutra Stock Portal App</h3>
-                            </div>
-                            <p class="project-desc">A comprehensive Android application for stock market analysis and tracking.</p>
-                            <div class="card-footer">
-                                <span class="tech-stack">Flutter</span>
-                            </div>
+            </div>
+            <div class="bento-grid">
+                <!-- Large Project Card -->
+                <div class="project-card large">
+                    <div class="project-image-overlay"></div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">Flutter</span>
+                        </div>
+                        <h3 class="project-name">Laganisutra Stock Portal</h3>
+                        <p class="project-description">A comprehensive Android application for stock market analysis and tracking with real-time data updates.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Flutter</span>
+                            <span class="tech-badge">Dart</span>
+                            <span class="tech-badge">REST API</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="card-content">
-                            <div class="card-header">
-                                <span class="platform-tag">Web/API</span>
-                                <h3 class="project-title">Laganisutra Backend</h3>
-                            </div>
-                            <p class="project-desc">The robust backend powering the Laganisutra Stock Portal, handling real-time data and user management.</p>
-                            <div class="card-footer">
-                                <span class="tech-stack">Python, Django</span>
-                            </div>
+                <!-- Medium Project Card -->
+                <div class="project-card medium">
+                    <div class="project-image-overlay"></div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Backend</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <h3 class="project-name">Laganisutra Backend</h3>
+                        <p class="project-description">Robust backend powering the stock portal with real-time data processing.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="card-content">
-                            <div class="card-header">
-                                <span class="platform-tag">Android & iOS</span>
-                                <h3 class="project-title">JOBMATCHY</h3>
-                            </div>
-                            <p class="project-desc">A job matching platform connecting job seekers with employers.</p>
-                            <div class="card-footer">
-                                <span class="tech-stack">Flutter</span>
-                            </div>
+                <!-- Wide Project Card -->
+                <div class="project-card wide">
+                    <div class="project-image-overlay"></div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">iOS</span>
+                            <span class="tag">Android</span>
+                        </div>
+                        <h3 class="project-name">JOBMATCHY Nepal</h3>
+                        <p class="project-description">A job matching platform connecting job seekers with employers across Nepal.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Flutter</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Django</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Project 4 -->
-                    <div class="project-card">
-                        <div class="card-content">
-                            <div class="card-header">
-                                <span class="platform-tag">Web/API</span>
-                                <h3 class="project-title">JOBMATCHY Backend</h3>
-                            </div>
-                            <p class="project-desc">Scalable backend API for the JOBMATCHY platform.</p>
-                            <div class="card-footer">
-                                <span class="tech-stack">Python, Django</span>
-                            </div>
+                <!-- Small Project Card -->
+                <div class="project-card small">
+                    <div class="project-image-overlay"></div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Backend</span>
+                        </div>
+                        <h3 class="project-name">JOBMATCHY Backend</h3>
+                        <p class="project-description">Scalable API for the job matching platform.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">PostgreSQL</span>
                         </div>
                     </div>
                 </div>
@@ -133,25 +234,65 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <p>Interested in working together? Feel free to reach out!</p>
-                    <div class="contact-details">
-                        <a href="mailto:najmulbro123@gmail.com" class="email-link">najmulbro123@gmail.com</a>
-                        <p class="phone-number">+977 9804262886</p>
-                        <a href="https://www.linkedin.com/in/najmul12/" target="_blank" class="linkedin-link">Connect on LinkedIn</a>
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="contact-intro">Interested in working together or have a project in mind? Feel free to reach out!</p>
+                    <div class="contact-cards">
+                        <a href="mailto:najmulbro123@gmail.com" class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">najmulbro123@gmail.com</div>
+                            </div>
+                        </a>
+                        <a href="tel:+9779804262886" class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Phone</div>
+                                <div class="contact-value">+977 9804262886</div>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/najmul12/" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">LinkedIn</div>
+                                <div class="contact-value">Connect with me</div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Najmul Hak Ansari. Crafted with passion.</p>
+        </footer>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Najmul Hak Ansari. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Decorative Background Elements -->
+    <div class="bg-decoration">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+    </div>
 </body>
 </html>
